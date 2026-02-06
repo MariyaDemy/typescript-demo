@@ -1,9 +1,9 @@
-import {Dialog} from "./base";
+import { Dialog } from "./base";
 import "../views/iconcheck";
 
 export const action = "share";
 
-export class DialogBox extends Dialog{
+export class DialogBox extends Dialog {
 	init(){
 		return {
 			view: "window",
@@ -16,14 +16,14 @@ export class DialogBox extends Dialog{
 				view:"form",
 				elements:[
 					{ cols:[
-						{ view:"iconcheck", name:"fb", icon:"facebook-square",label:"Facebook"},
+						{ view:"iconcheck", name:"fb", icon:"facebook-square", label:"Facebook"},
 						{ view:"iconcheck", name:"twitter", icon:"twitter", label:"Twitter"},
 						{ view:"iconcheck", name:"gplus", icon:"google-plus", label:"Google +"}
 					]},
 					this.getButtons("Share", "Cancel")
 				],
 				rules:{
-					$obj:function(obj){
+					$obj:function(obj: Record<string, number>){
 						return obj.fb || obj.twitter || obj.gplus;
 					}
 				}
@@ -40,6 +40,5 @@ export class DialogBox extends Dialog{
 			webix.alert("The film has been shared");
 			this.close();
 		}
-
 	}
 }

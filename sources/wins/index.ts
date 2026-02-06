@@ -5,7 +5,7 @@ import * as sha from "./share";
 const bases = [ rec, rew, sha ];
 const dialogs = {};
 
-export function init(grid){
+export function init(grid:webix.ui.datatable){
 	for (let i = 0; i < bases.length; i++){
 		dialogs[bases[i].action] = new bases[i].DialogBox(grid);
 	}

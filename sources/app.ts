@@ -1,21 +1,19 @@
 import * as wins from "./wins/index";
 import "./less/app.less";
-
 class App {
 	init(): void {
 		const layout:webix.ui.layout = this.createLayout();
-		const grid:webix.ui.datatable = layout.getChildViews()[1];
+		const grid = (<webix.ui.datatable>layout.getChildViews()[1]);
 		this.createDialogs(grid);
 	}
 	createLayout():webix.ui.layout {
-
 		const datatable:webix.ui.datatableConfig = {
 			view:"datatable",
 			id:"filmsdata",
 			editable:true,
 			editaction:"dblclick",
 			autoConfig:true,
-			url:"sources/server/films.json",
+			url:"/sources/server/films.json",
 			pager:"pagerA",
 			scrollX:false
 		};

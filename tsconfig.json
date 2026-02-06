@@ -1,13 +1,12 @@
 {
     "compilerOptions": {
-    	"module": "commonjs",
-        "target": "es5",
-        "lib": ["es2015", "dom"],
-        
+    	"module": "ES2022",
+        "target": "ES2022",
+        "lib": ["ES2022", "dom"],
         "sourceMap": true
     },
-    "files":[
+    "include": [
         "sources/**/*.ts",
-        "node_modules/webix/webix.d.ts"
+        "./node_modules/webix/types/webix.global.d.ts"
     ]
 }

@@ -1,8 +1,8 @@
-import {Dialog} from "./base";
+import { Dialog } from "./base";
 
 export const action = "record";
 
-export class DialogBox extends Dialog{
+export class DialogBox extends Dialog {
 	init(){
 		return {
 			view: "window",
@@ -29,13 +29,12 @@ export class DialogBox extends Dialog{
 	onshow(){
 		(<webix.ui.text>this.form.elements.title).focus();
 	}
-
 	apply(){
 		if(this.form.validate()){
 			const values = this.form.getValues();
 			if(values.id){
-				this.grid.updateItem(values.id,values);
-			} else{
+				this.grid.updateItem(values.id, values);
+			} else {
 				const id = this.grid.add(values, 0);
 				this.grid.showItem(id);
 			}

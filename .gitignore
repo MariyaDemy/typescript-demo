@@ -3,4 +3,5 @@ codebase
 *.zip
 *.tgz
 *.log
+.env
 .vscode

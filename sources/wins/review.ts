@@ -1,8 +1,8 @@
-import {Dialog} from "./base";
+import { Dialog } from "./base";
 
 export const action = "rating";
 
-export class DialogBox extends Dialog{
+export class DialogBox extends Dialog {
 	init(){
 		return {
 			view: "window",
